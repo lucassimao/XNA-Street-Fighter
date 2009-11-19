@@ -1,0 +1,13 @@
+*.exe
+*.obj
+Debug/*
+*/Debug/*
+*.htm
+*.html
+*.pdb
+*.dep
+*.ncb
+*.idb
+obj/*
+bin/*
+sprites/*
