@@ -12,17 +12,20 @@ using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 using XNAGifAnimationLibrary;
 
-
 namespace Street_Fighter
 {
     
     public class SpriteManager : Microsoft.Xna.Framework.DrawableGameComponent
     {
         SpriteBatch spriteBatch;
+        Fighter lutador1;
+        Fighter lutador2;
 
-        public SpriteManager(Game game)
+        public SpriteManager(Game game,Fighter lutador1,Fighter lutador2)
             : base(game)
         {
+            this.lutador1 = lutador1;
+            this.lutador2 = lutador2;
         }
 
         public override void Initialize()
@@ -39,10 +42,18 @@ namespace Street_Fighter
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+           
+            lutador1.update(gameTime);
+            lutador1.update(gameTime);
         }
 
         public override void Draw(GameTime gameTime)
         {
+            spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
+            spriteBatch.Draw(lutador1.CurrentState.CurrentTexture, new Vector2(440, 330), lutador1.CurrentState.CurrentFase, 
+                Color.White, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+            spriteBatch.End();
+
             base.Draw(gameTime);
         }
     }

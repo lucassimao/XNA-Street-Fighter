@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>background\sfz2-vega-animated.gif</Source>
+      <Name>background\sfz2-vega-animated</Name>
+      <Importer>GifAminationImporter</Importer>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\background\sfz2-vega-animated.xnb</Output>
+      <Time>2009-11-19T13:43:54.5188-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_andando_para_atras.png</Source>
+      <Name>Ryu\ryu_andando_para_atras</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_andando_para_atras.xnb</Output>
+      <Time>2009-11-19T14:07:50.055-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_andando_para_frente.png</Source>
+      <Name>Ryu\ryu_andando_para_frente</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_andando_para_frente.xnb</Output>
+      <Time>2009-11-19T14:07:50.0706-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_apanhando1.png</Source>
+      <Name>Ryu\ryu_apanhando1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_apanhando1.xnb</Output>
+      <Time>2009-11-19T14:07:50.1018-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_apanhando2.png</Source>
+      <Name>Ryu\ryu_apanhando2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_apanhando2.xnb</Output>
+      <Time>2009-11-19T14:07:50.1174-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_apanhando3.png</Source>
+      <Name>Ryu\ryu_apanhando3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_apanhando3.xnb</Output>
+      <Time>2009-11-19T14:07:50.1486-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_apanhando4.png</Source>
+      <Name>Ryu\ryu_apanhando4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_apanhando4.xnb</Output>
+      <Time>2009-11-19T14:07:50.1642-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_apanhando5.png</Source>
+      <Name>Ryu\ryu_apanhando5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_apanhando5.xnb</Output>
+      <Time>2009-11-19T14:07:50.1954-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_defesa_para_baixo.png</Source>
+      <Name>Ryu\ryu_defesa_para_baixo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_defesa_para_baixo.xnb</Output>
+      <Time>2009-11-19T14:07:50.211-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_defesa_para_baixo2.png</Source>
+      <Name>Ryu\ryu_defesa_para_baixo2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_defesa_para_baixo2.xnb</Output>
+      <Time>2009-11-19T14:07:50.2266-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_defesa_por_baixo.png</Source>
+      <Name>Ryu\ryu_defesa_por_baixo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_defesa_por_baixo.xnb</Output>
+      <Time>2009-11-19T14:07:50.2266-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_escapando_por_cima.png</Source>
+      <Name>Ryu\ryu_escapando_por_cima</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_escapando_por_cima.xnb</Output>
+      <Time>2009-11-19T14:07:50.2266-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_gingando.png</Source>
+      <Name>Ryu\ryu_gingando</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_gingando.xnb</Output>
+      <Time>2009-11-19T21:11:45.0958-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_golpesDeKarate.png</Source>
+      <Name>Ryu\ryu_golpesDeKarate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_golpesDeKarate.xnb</Output>
+      <Time>2009-11-19T14:07:50.2734-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_golpesRasteiros.png</Source>
+      <Name>Ryu\ryu_golpesRasteiros</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_golpesRasteiros.xnb</Output>
+      <Time>2009-11-19T14:07:50.3046-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_golpesSuperiores.png</Source>
+      <Name>Ryu\ryu_golpesSuperiores</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_golpesSuperiores.xnb</Output>
+      <Time>2009-11-19T14:07:50.3202-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_haduken.png</Source>
+      <Name>Ryu\ryu_haduken</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_haduken.xnb</Output>
+      <Time>2009-11-19T14:07:50.3358-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_helicoptero.png</Source>
+      <Name>Ryu\ryu_helicoptero</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_helicoptero.xnb</Output>
+      <Time>2009-11-19T14:07:50.367-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_outros_golpes.png</Source>
+      <Name>Ryu\ryu_outros_golpes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_outros_golpes.xnb</Output>
+      <Time>2009-11-19T14:07:50.3826-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_outros_golpes2.png</Source>
+      <Name>Ryu\ryu_outros_golpes2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_outros_golpes2.xnb</Output>
+      <Time>2009-11-19T14:07:50.4138-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_pezadas1.png</Source>
+      <Name>Ryu\ryu_pezadas1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_pezadas1.xnb</Output>
+      <Time>2009-11-19T14:07:50.445-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_pezadas2.png</Source>
+      <Name>Ryu\ryu_pezadas2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_pezadas2.xnb</Output>
+      <Time>2009-11-19T14:07:50.5698-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_porrada_para_esquerda.png</Source>
+      <Name>Ryu\ryu_porrada_para_esquerda</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_porrada_para_esquerda.xnb</Output>
+      <Time>2009-11-19T14:07:50.601-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_rolando_para_frente.png</Source>
+      <Name>Ryu\ryu_rolando_para_frente</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_rolando_para_frente.xnb</Output>
+      <Time>2009-11-19T14:07:50.6166-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_salto_por_cima_do_oponente.png</Source>
+      <Name>Ryu\ryu_salto_por_cima_do_oponente</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_salto_por_cima_do_oponente.xnb</Output>
+      <Time>2009-11-19T14:07:50.6322-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_socos1.png</Source>
+      <Name>Ryu\ryu_socos1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_socos1.xnb</Output>
+      <Time>2009-11-19T14:07:50.6478-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_socos2.png</Source>
+      <Name>Ryu\ryu_socos2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_socos2.xnb</Output>
+      <Time>2009-11-19T14:07:50.6946-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_subindo.png</Source>
+      <Name>Ryu\ryu_subindo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_subindo.xnb</Output>
+      <Time>2009-11-19T14:07:50.7258-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Ryu\ryu_win.png</Source>
+      <Name>Ryu\ryu_win</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_win.xnb</Output>
+      <Time>2009-11-19T14:07:50.7882-03:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\Content\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Users\user\Projetos XNA\Street Fighter\XNAGifAnimationLibrary.Pipeline.dll</Key>
+        <Value>2009-11-19T13:08:02.8158-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Users\user\Projetos XNA\Street Fighter\XNAGifAnimationLibrary.dll</Key>
+        <Value>2009-11-19T13:08:02.3166-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2009-05-14T11:13:52-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2009-05-14T11:13:52-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2009-05-14T11:13:52-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2009-05-14T11:13:52-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2009-05-14T11:13:52-03:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\3.0.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2009-10-13T15:05:47.0134-03:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

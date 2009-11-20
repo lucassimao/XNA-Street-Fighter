@@ -11,16 +11,38 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
+using Street_Fighter.state;
 
 namespace Street_Fighter
 {
-   abstract class Fighter
+   public abstract class Fighter
     {
-        protected List<Texture2D> spriteSheets;
-        protected Texture2D currentSpriteSheet;
-        protected Rectangle currentSprite;
+        protected List<State> states;
+        protected State currentState;
         protected Vector2 posicao;
         protected uint updateInterval;
         protected uint life;
+        protected Game game;
+
+        public State CurrentState
+        {
+            get
+            {
+                return currentState;
+            }
+        }
+
+
+        protected Fighter(Game game)
+        {
+            this.states = new List<State>();
+            this.game = game;
+            this.updateInterval = 50;
+            this.life = 1000;
+            this.posicao = Vector2.Zero;
+            this.currentState = null;
+        }
+
+        public abstract void update(GameTime gameTime);
     }
 }
