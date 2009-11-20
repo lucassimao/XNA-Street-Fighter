@@ -9,5 +9,6 @@ Debug/*
 *.ncb
 *.idb
 obj/*
+*/obj/*
 bin/*
 sprites/*
