@@ -20,7 +20,6 @@ namespace Street_Fighter
         protected List<State> states;
         protected State currentState;
         protected Vector2 posicao;
-        protected uint updateInterval;
         protected uint life;
         protected Game game;
 
@@ -37,7 +36,6 @@ namespace Street_Fighter
         {
             this.states = new List<State>();
             this.game = game;
-            this.updateInterval = 50;
             this.life = 1000;
             this.posicao = Vector2.Zero;
             this.currentState = null;

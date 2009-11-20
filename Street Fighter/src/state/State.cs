@@ -15,7 +15,7 @@ namespace Street_Fighter.state
         protected Texture2D spriteSheet = null;
         protected List<Rectangle> fases = new List<Rectangle>();
         protected ushort faseAtual = 0;
-        protected uint updateInterval = 1000;
+        protected uint updateInterval = 700;
         protected int timeSinceLastFrame = 0;
         public Texture2D CurrentTexture
         {
@@ -31,14 +31,39 @@ namespace Street_Fighter.state
                 return fases[faseAtual];
             }
         }
+        public virtual bool isRunning
+        {
+            get
+            {
+                return faseAtual != fases.Count-1;
+            }
+        }
 
-        public State(Game game,String descricao)
+
+        public State(Game game, String descricao)
         {
             this.game = game;
             this.descricao = descricao;
         }
 
-        public abstract void update(GameTime gameTime);
-        
+        public void update(GameTime gameTime)
+        {
+            this.timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
+            if (this.timeSinceLastFrame > this.updateInterval)
+            {
+                if (this.faseAtual == this.fases.Count - 1)
+                    this.faseAtual = 0;
+                else
+                    this.faseAtual++;
+                this.timeSinceLastFrame = 0;
+            }
+        }
+
+        public virtual void reset()
+        {
+            this.timeSinceLastFrame = 0;
+            this.faseAtual = 0;
+        }
+
     }
 }

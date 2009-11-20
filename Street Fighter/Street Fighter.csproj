@@ -98,6 +98,10 @@
     <Compile Include="src\Fighter.cs" />
     <Compile Include="src\Ryu.cs" />
     <Compile Include="src\SpriteManager.cs" />
+    <Compile Include="src\state\Ryu\Chute1.cs" />
+    <Compile Include="src\state\Ryu\Chute2.cs" />
+    <Compile Include="src\state\Ryu\Chute3.cs" />
+    <Compile Include="src\state\Ryu\Chute4.cs" />
     <Compile Include="src\state\Ryu\Gingando.cs" />
     <Compile Include="src\state\State.cs" />
     <Compile Include="src\StreetFighterGame.cs" />
