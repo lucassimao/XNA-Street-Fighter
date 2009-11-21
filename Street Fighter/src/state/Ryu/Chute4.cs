@@ -19,9 +19,8 @@ namespace Street_Fighter.state.Ryu
             this.fases.Add(new Rectangle(348, 52, 111, 108));
             this.fases.Add(new Rectangle(644, 49, 105, 111));
             this.fases.Add(new Rectangle(961, 54, 76, 107));
-            this.fases.Add(new Rectangle(1264, 50, 69, 112));
-            this.fases.Add(new Rectangle(1550, 53, 86, 110));
-            this.fases.Add(new Rectangle(1841, 56, 84, 104));
+           this.fases.Add(new Rectangle(1264, 50, 69, 112));
+           this.fases.Add(new Rectangle(1550, 53, 86, 110));
         }
 
     }
