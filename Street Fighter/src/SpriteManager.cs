@@ -41,22 +41,22 @@ namespace Street_Fighter
 
         public override void Update(GameTime gameTime)
         {
-                lutador1.update(gameTime);
-                lutador1.update(gameTime);
-                base.Update(gameTime);
+            base.Update(gameTime);    
+            lutador1.update(gameTime);
+                
             
         }
 
         public override void Draw(GameTime gameTime)
         {
-   
+            base.Draw(gameTime);
                 spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
                 
                 spriteBatch.Draw(lutador1.CurrentState.CurrentTexture, new Vector2(440, 330), lutador1.CurrentState.CurrentFase,
                     Color.White, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
                 spriteBatch.End();
 
-                base.Draw(gameTime);
+               
    
         }
     }

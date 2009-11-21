@@ -15,7 +15,7 @@ namespace Street_Fighter.state
         protected Texture2D spriteSheet = null;
         protected List<Rectangle> fases = new List<Rectangle>();
         protected ushort faseAtual = 0;
-        protected uint updateInterval = 700;
+        protected uint updateInterval = 350;
         protected int timeSinceLastFrame = 0;
         public Texture2D CurrentTexture
         {

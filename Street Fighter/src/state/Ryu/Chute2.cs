@@ -13,7 +13,7 @@ namespace Street_Fighter.state.Ryu
         public Chute2(Game game)
             : base(game, "Chute2")
         {
-            this.updateInterval = 400;
+            this.updateInterval = 150;
             this.spriteSheet = game.Content.Load<Texture2D>(@"Ryu\ryu_pezadas1");
             this.fases.Add(new Rectangle(683, 237, 83, 103));
             this.fases.Add(new Rectangle(971, 238, 88, 102));
