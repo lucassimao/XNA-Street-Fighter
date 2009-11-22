@@ -6,8 +6,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Street_Fighter.state;
-using Street_Fighter.state.Ryu;
+using Street_Fighter.action;
+using Street_Fighter.action.Ryu;
 
 namespace Street_Fighter
 {

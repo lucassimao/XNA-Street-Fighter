@@ -6,9 +6,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Street_Fighter.state
+namespace Street_Fighter.action
 {
-    public abstract class State
+    public abstract class Action
     {
         protected String descricao;
         protected Game game = null;
@@ -40,7 +40,7 @@ namespace Street_Fighter.state
         }
 
 
-        public State(Game game, String descricao)
+        public Action(Game game, String descricao)
         {
             this.game = game;
             this.descricao = descricao;

@@ -6,12 +6,12 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Street_Fighter.state.Ryu
+namespace Street_Fighter.action.Ryu
 {
-    class Chute3 : State
+    class Chute4 : Action
     {
-        public Chute3(Game game)
-            : base(game, "Chute3")
+        public Chute4(Game game)
+            : base(game, "Chute4")
         {
             this.spriteSheet = game.Content.Load<Texture2D>(@"Ryu\ryu_pezadas2");
             this.fases.Add(new Rectangle(97, 56, 70, 103));

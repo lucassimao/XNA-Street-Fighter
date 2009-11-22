@@ -6,9 +6,9 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Street_Fighter.state.Ryu
+namespace Street_Fighter.action.Ryu
 {
-    class Chute2 : State
+    class Chute2 : Action
     {
         public Chute2(Game game)
             : base(game, "Chute2")

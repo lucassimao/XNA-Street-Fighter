@@ -11,19 +11,18 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
-using Street_Fighter.state;
 
 namespace Street_Fighter
 {
    public abstract class Fighter
     {
-        protected List<State> states;
-        protected State currentState;
+       protected List<Street_Fighter.action.Action> states;
+       protected Street_Fighter.action.Action currentState;
         protected Vector2 posicao;
         protected uint life;
         protected Game game;
 
-        public State CurrentState
+        public Street_Fighter.action.Action CurrentState
         {
             get
             {
@@ -34,7 +33,7 @@ namespace Street_Fighter
 
         protected Fighter(Game game)
         {
-            this.states = new List<State>();
+            this.states = new List<Street_Fighter.action.Action>();
             this.game = game;
             this.life = 1000;
             this.posicao = Vector2.Zero;
