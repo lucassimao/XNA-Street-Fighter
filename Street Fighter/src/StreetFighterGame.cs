@@ -44,6 +44,7 @@ namespace Street_Fighter
 
         protected override void UnloadContent()
         {
+  
         }
 
         protected override void Update(GameTime gameTime)
@@ -60,7 +61,7 @@ namespace Street_Fighter
 
             spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
             
-            spriteBatch.Draw(back.GetTexture(), new Rectangle(0, 0, 800, 600), null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 1);
+            spriteBatch.Draw(back.GetTexture(), new Rectangle(0, 0, Window.ClientBounds.Width, Window.ClientBounds.Height), null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 1);
            
             manager.Draw(gameTime);
             
