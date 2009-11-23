@@ -10,9 +10,9 @@ namespace Street_Fighter
 {
     class Ken : Fighter
     {
-        public Ken(Game game):base(game)
+        public Ken(Vector2 pos):base(pos)
         {
-            ContentManager cm = game.Content;
+
         }
 
         public override void update(GameTime gameTime)

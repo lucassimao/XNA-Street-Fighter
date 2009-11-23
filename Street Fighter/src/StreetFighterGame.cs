@@ -26,12 +26,12 @@ namespace Street_Fighter
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             
-
         }
 
         protected override void Initialize()
         {
-            manager = new SpriteManager(this,new Ryu(this),null);
+            ContentManagerFacade.buildGameContentManager(this);
+            manager = new SpriteManager(this, new Ryu(new Vector2(440, 330)), null);
             Components.Add(manager);
             base.Initialize();
         }

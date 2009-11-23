@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Street_Fighter.interfaces;
 
 namespace Street_Fighter.action.Ryu
 {
@@ -18,11 +19,20 @@ namespace Street_Fighter.action.Ryu
             }
         }
 
-        public Gingando(Game game):base(game,"Gingando")
+        public Gingando(IMoveable objMovimentavel)
+            : base(objMovimentavel, "Gingando")
         {
-            this.spriteSheet = game.Content.Load<Texture2D>(@"Ryu\ryu_gingando");
-            this.fases.Add(new Rectangle(103, 53, 86, 108));
-            this.fases.Add(new Rectangle(390, 53, 86, 108));
+            this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_gingando");
+            this.steps.Add(new Rectangle(103, 53, 86, 108));
+            this.steps.Add(new Rectangle(390, 53, 86, 108));
+        }
+
+        protected override void atualizarPosicionamento()
+        {
+            if (this.currentStep == 0)
+                objMovimentavel.incrementCurrentPosition(5, 0);
+            else
+                objMovimentavel.incrementCurrentPosition(-5, 0);
         }
     }
 }

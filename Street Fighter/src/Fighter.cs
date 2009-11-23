@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -11,33 +8,53 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
+using Street_Fighter.action;
+using Street_Fighter.interfaces;
 
 namespace Street_Fighter
 {
-   public abstract class Fighter
+    public abstract class Fighter : IMoveable
     {
-       protected List<Street_Fighter.action.Action> states;
-       protected Street_Fighter.action.Action currentState;
+        protected List<Action> actions;
+        protected Action currentAction;
+        protected Action posicaoDeRepouso; // é a posição onde ele fica "gingando"
         protected Vector2 posicao;
+        protected readonly Vector2 startPosition;
         protected uint life;
-        protected Game game;
 
-        public Street_Fighter.action.Action CurrentState
+        public Action CurrentAction
         {
             get
             {
-                return currentState;
+                return currentAction;
             }
         }
 
-
-        protected Fighter(Game game)
+        Vector2 IMoveable.CurrentPosition
         {
-            this.states = new List<Street_Fighter.action.Action>();
-            this.game = game;
+            get { return posicao; }
+        }
+
+        void IMoveable.toStartPosition() {
+            this.posicao = startPosition;
+        }
+
+        Rectangle IMoveable.ReferenceSurface { get { return posicaoDeRepouso.CurrentStep; } }
+
+        void IMoveable.incrementCurrentPosition(float xInc, float yInc)
+        {
+            posicao.X += xInc;
+            posicao.Y += yInc;
+        }
+
+        protected Fighter(Vector2 posicao)
+        {
+            this.actions = new List<Action>();
             this.life = 1000;
-            this.posicao = Vector2.Zero;
-            this.currentState = null;
+            this.posicao = posicao;
+            this.startPosition = posicao;
+            this.posicao = posicao;
+            this.currentAction = null;
         }
 
         public abstract void update(GameTime gameTime);

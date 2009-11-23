@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
+using Street_Fighter.interfaces;
 using XNAGifAnimationLibrary;
 
 namespace Street_Fighter
@@ -47,12 +48,12 @@ namespace Street_Fighter
             
         }
 
-        public override void Draw(GameTime gameTime)
+        public  override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
                 spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
                 
-                spriteBatch.Draw(lutador1.CurrentState.CurrentTexture, new Vector2(440, 330), lutador1.CurrentState.CurrentFase,
+                spriteBatch.Draw(lutador1.CurrentAction.Texture, ((IMoveable)lutador1).CurrentPosition, lutador1.CurrentAction.CurrentStep,
                     Color.White, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
                 spriteBatch.End();
 
