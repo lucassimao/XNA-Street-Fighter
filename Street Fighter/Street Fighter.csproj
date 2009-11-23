@@ -99,12 +99,13 @@
     <Compile Include="src\action\Ryu\Chute3.cs" />
     <Compile Include="src\action\Ryu\Chute4.cs" />
     <Compile Include="src\action\Ryu\Gingando.cs" />
+    <Compile Include="src\action\Ryu\Recuar.cs" />
     <Compile Include="src\ContentManagerFacade.cs" />
     <Compile Include="src\interfaces\IMoveable.cs" />
-    <Compile Include="src\Ken.cs" />
     <Compile Include="src\GameEntryPoint.cs" />
-    <Compile Include="src\Fighter.cs" />
-    <Compile Include="src\Ryu.cs" />
+    <Compile Include="src\lutadores\Fighter.cs" />
+    <Compile Include="src\lutadores\Ken.cs" />
+    <Compile Include="src\lutadores\Ryu.cs" />
     <Compile Include="src\SpriteManager.cs" />
     <Compile Include="src\StreetFighterGame.cs" />
   </ItemGroup>
