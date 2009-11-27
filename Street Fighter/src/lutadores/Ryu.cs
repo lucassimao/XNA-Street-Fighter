@@ -22,11 +22,12 @@ namespace Street_Fighter.lutadores
             this.posicaoDeRepouso = new Gingando(this);
 
             actions.Add(this.posicaoDeRepouso);
-            actions.Add(new Chute1(this));
-            actions.Add(new Chute2(this));
-            actions.Add(new Chute3(this));
-            actions.Add(new Chute4(this));
+            actions.Add(new Chute1());
+            actions.Add(new Chute2());
+            actions.Add(new Chute3());
+            actions.Add(new Chute4());
             actions.Add(new Recuar(this));
+            actions.Add(new Avancar(this));
             this.currentAction = actions[0];
 
 
@@ -35,15 +36,17 @@ namespace Street_Fighter.lutadores
         public override void update(GameTime gameTime)
         {
             this.currentAction.update(gameTime);
-            KeyboardState state = Keyboard.GetState();
-
-            if ((!this.currentAction.isRunning || this.currentAction == this.posicaoDeRepouso))
+            
+            if (!this.currentAction.isRunning || this.currentAction == this.posicaoDeRepouso)
             {
-                // atribui uma ação baseada na tecla selecionada
+                KeyboardState state = Keyboard.GetState();
+
                 if (state.IsKeyDown(Keys.C))
                     this.currentAction = actions[this.random.Next(1, 5)];
                 else if (state.IsKeyDown(Keys.Right))
                     this.currentAction = actions[5];
+                else if (state.IsKeyDown(Keys.Left))
+                    this.currentAction = actions[6];
 
             }
 

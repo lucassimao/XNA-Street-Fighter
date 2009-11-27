@@ -7,8 +7,8 @@ namespace Street_Fighter.action.Ryu
 {
     class Chute3 : Action
     {
-        public Chute3(IMoveable objMovimentavel)
-            : base(objMovimentavel, "Chute3")
+        public Chute3()
+            : base(null, "Chute3")
         {
             this.updateInterval = 250;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_pezadas2");

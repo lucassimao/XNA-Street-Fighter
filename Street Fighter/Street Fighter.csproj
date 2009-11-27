@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\action\Action.cs" />
+    <Compile Include="src\action\Ryu\Avancar.cs" />
     <Compile Include="src\action\Ryu\Chute1.cs" />
     <Compile Include="src\action\Ryu\Chute2.cs" />
     <Compile Include="src\action\Ryu\Chute3.cs" />

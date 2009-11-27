@@ -8,8 +8,8 @@ namespace Street_Fighter.action.Ryu
 {
     class Chute4 : Action
     {
-        public Chute4(IMoveable objMovimentavel)
-            : base(objMovimentavel, "Chute4")
+        public Chute4()
+            : base(null, "Chute4")
         {
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_pezadas2");
             this.steps.Add(new Rectangle(97, 56, 70, 103));

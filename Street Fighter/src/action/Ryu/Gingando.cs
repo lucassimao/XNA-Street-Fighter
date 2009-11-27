@@ -23,11 +23,11 @@ namespace Street_Fighter.action.Ryu
             : base(objMovimentavel, "Gingando")
         {
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_gingando");
-            this.steps.Add(new Rectangle(103, 53, 86, 108));
-            this.steps.Add(new Rectangle(390, 53, 86, 108));
+            this.steps.Add(new Rectangle(103, 53, 88, 108));
+            this.steps.Add(new Rectangle(390, 53, 88, 108));
         }
 
-        protected override void atualizarPosicionamento()
+        protected override void atualizarObjeto()
         {
             if (this.currentStep == 0)
                 objMovimentavel.incrementCurrentPosition(5, 0);

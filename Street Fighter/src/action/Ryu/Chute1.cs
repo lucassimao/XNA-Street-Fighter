@@ -11,8 +11,8 @@ namespace Street_Fighter.action.Ryu
 {
     class Chute1 : Action
     {
-        public Chute1(IMoveable objMovimentavel)
-            : base(objMovimentavel, "Chute1")
+        public Chute1()
+            : base(null, "Chute1")
         {
 
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_pezadas1");

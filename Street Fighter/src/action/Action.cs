@@ -56,9 +56,8 @@ namespace Street_Fighter.action
                     this.currentStep = 0;
                 else
                     this.currentStep++;
-
-                atualizarPosicionamento();
-
+                    
+                atualizarObjeto();
                 this.timeSinceLastFrame = 0;
             }
         }
@@ -69,13 +68,9 @@ namespace Street_Fighter.action
             this.currentStep = 0;
         }
 
-        protected virtual void atualizarPosicionamento()
+        protected virtual void atualizarObjeto()
         {
-           float deltaX = objMovimentavel.ReferenceSurface.Width - CurrentStep.Width ;
-           float deltaY = objMovimentavel.ReferenceSurface.Height - CurrentStep.Height;
-
-           objMovimentavel.toStartPosition();
-           objMovimentavel.incrementCurrentPosition(deltaX, deltaY);
+            // fake implementation
         }
 
         public override string ToString()

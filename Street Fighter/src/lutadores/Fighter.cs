@@ -19,9 +19,12 @@ namespace Street_Fighter
         protected Action currentAction;
         protected Action posicaoDeRepouso; // é a posição onde ele fica "gingando"
         protected Vector2 posicao;
-        protected readonly Vector2 startPosition;
         protected uint life;
 
+        public Action PosicaoDeRepouso
+        {
+            get { return this.posicaoDeRepouso; }
+        }
         public Action CurrentAction
         {
             get
@@ -30,16 +33,12 @@ namespace Street_Fighter
             }
         }
 
-        Vector2 IMoveable.CurrentPosition
+        public Vector2 CurrentPosition
         {
             get { return posicao; }
         }
 
-        void IMoveable.toStartPosition() {
-            this.posicao = startPosition;
-        }
 
-        Rectangle IMoveable.ReferenceSurface { get { return posicaoDeRepouso.CurrentStep; } }
 
         void IMoveable.incrementCurrentPosition(float xInc, float yInc)
         {
@@ -52,7 +51,6 @@ namespace Street_Fighter
             this.actions = new List<Action>();
             this.life = 1000;
             this.posicao = posicao;
-            this.startPosition = posicao;
             this.posicao = posicao;
             this.currentAction = null;
         }

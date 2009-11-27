@@ -10,13 +10,5 @@ namespace Street_Fighter.interfaces
         // Se um objeto que implementa esta interface estiver na posião (10,2) e o método incrementCurrentPosition
         // é chamado com os parâmetros (-2,3) a nova posição do objeto será (8,5)
         void incrementCurrentPosition(float xInc, float yInc);
-        
-        Vector2 CurrentPosition { get; }
-
-        // Solicita ao objeto o retorno à sua posição inicial
-        void toStartPosition();
-        
-        // Representa a área ocupada pelo objeto, e que servirá de referência
-        Rectangle ReferenceSurface { get; }
     }
 }

@@ -11,6 +11,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 using XNAGifAnimationLibrary;
+using Street_Fighter.lutadores;
 
 namespace Street_Fighter
 {

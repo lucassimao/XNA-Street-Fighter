@@ -42,23 +42,37 @@ namespace Street_Fighter
 
         public override void Update(GameTime gameTime)
         {
-            base.Update(gameTime);    
+            base.Update(gameTime);
             lutador1.update(gameTime);
-                
-            
+
+
         }
 
-        public  override void Draw(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
-                spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
-                
-                spriteBatch.Draw(lutador1.CurrentAction.Texture, ((IMoveable)lutador1).CurrentPosition, lutador1.CurrentAction.CurrentStep,
-                    Color.White, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
-                spriteBatch.End();
+            spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
 
-               
-   
+            Vector2 posicao = lutador1.CurrentPosition;
+
+            float rightLowerXCorner = posicao.X + lutador1.PosicaoDeRepouso.CurrentStep.Width*2;
+            float rightLowerYCorner = posicao.Y + lutador1.PosicaoDeRepouso.CurrentStep.Height*2;
+
+            float wrongNewRightLowerXCorner = posicao.X + lutador1.CurrentAction.CurrentStep.Width*2;
+            float wrongNewRightLowerYCorner = posicao.Y + lutador1.CurrentAction.CurrentStep.Height*2;
+
+
+            Vector2 posicaoCorrigida = new Vector2();
+
+            posicaoCorrigida.X = posicao.X - (wrongNewRightLowerXCorner - rightLowerXCorner);
+            posicaoCorrigida.Y = posicao.Y - (wrongNewRightLowerYCorner - rightLowerYCorner);
+
+            spriteBatch.Draw(lutador1.CurrentAction.Texture, posicaoCorrigida, lutador1.CurrentAction.CurrentStep,
+                Color.White, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+
+            spriteBatch.End();
+
+
         }
     }
 }
