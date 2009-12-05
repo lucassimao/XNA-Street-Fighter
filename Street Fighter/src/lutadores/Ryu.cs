@@ -65,8 +65,7 @@ namespace Street_Fighter.lutadores
                         this.currentAction = actions[11];
                     else
                         this.currentAction = actions[9];
-                }
-                    
+                }                   
 
             }
 

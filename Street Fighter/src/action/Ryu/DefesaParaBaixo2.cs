@@ -16,7 +16,6 @@ namespace Street_Fighter.action.Ryu
             this.steps.Add(new Rectangle(383, 84, 96, 75));
             this.steps.Add(new Rectangle(677, 85, 90, 76));
             this.steps.Add(new Rectangle(965, 81, 93, 81));
-            this.steps.Add(new Rectangle(1257, 81, 90, 80));
 
         }
     }
