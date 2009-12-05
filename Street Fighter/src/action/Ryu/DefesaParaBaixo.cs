@@ -8,7 +8,7 @@ namespace Street_Fighter.action.Ryu
     class DefesaParaBaixo : Action
     {
         public DefesaParaBaixo()
-            : base(null, "Chute3")
+            : base(null, "DefesaParaBaixo")
         {
             this.updateInterval = 350;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_defesa_para_baixo");

@@ -29,6 +29,7 @@ namespace Street_Fighter.lutadores
             actions.Add(new Recuar(this));
             actions.Add(new Avancar(this));
             actions.Add(new DefesaParaBaixo());
+            actions.Add(new DefesaParaBaixo2());
             this.currentAction = actions[0];
 
 
@@ -49,7 +50,7 @@ namespace Street_Fighter.lutadores
                 else if (state.IsKeyDown(Keys.Left))
                     this.currentAction = actions[6];
                 else if (state.IsKeyDown(Keys.Down))
-                    this.currentAction = actions[7];
+                    this.currentAction = actions[this.random.Next(7,9)];
 
             }
 

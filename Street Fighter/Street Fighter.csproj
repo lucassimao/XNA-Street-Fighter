@@ -100,6 +100,7 @@
     <Compile Include="src\action\Ryu\Chute3.cs" />
     <Compile Include="src\action\Ryu\Chute4.cs" />
     <Compile Include="src\action\Ryu\DefesaParaBaixo.cs" />
+    <Compile Include="src\action\Ryu\DefesaParaBaixo2.cs" />
     <Compile Include="src\action\Ryu\Gingando.cs" />
     <Compile Include="src\action\Ryu\Recuar.cs" />
     <Compile Include="src\ContentManagerFacade.cs" />

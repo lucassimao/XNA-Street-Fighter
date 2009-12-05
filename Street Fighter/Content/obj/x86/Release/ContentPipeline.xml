@@ -82,15 +82,6 @@
       <Time>2009-12-04T23:25:06.7836668-03:00</Time>
     </Item>
     <Item>
-      <Source>Ryu\ryu_defesa_para_baixo2.png</Source>
-      <Name>Ryu\ryu_defesa_para_baixo2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_defesa_para_baixo2.xnb</Output>
-      <Time>2009-11-19T14:07:52-03:00</Time>
-    </Item>
-    <Item>
       <Source>Ryu\ryu_defesa_por_baixo.png</Source>
       <Name>Ryu\ryu_defesa_por_baixo</Name>
       <Importer>TextureImporter</Importer>
