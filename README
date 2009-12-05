@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------------
+Street Fighter
+-------------------------------------------------------------------------------
+
+05/12/09:
+
+1) Sobre o projeto:
+
+Este projeto tem como objetivo desenvolver uma versão do 2D multiplayer do jogo 
+Street Fighter utilizando o framework XNA. Neste estágio inicial o jogo é single player
+e estão sendo programados os golpes dos lutadores iniciais: Ryu e Ken. 
+Posteriormente, serão adiocionados outros planos de fundo, personagens, IA, física de colisão, etc ... 
+
+1.1) Atualmente estou trabalhando no personagem Ryu
+
+1.1.1 Golpes implementados para o Ryu:
+
+1.1.1a -  4 tipos de Chutes ( tecla C ) Obs: Os 4 tipos de chutes randomicamente escolhidos, e são disparados pela mesma tecla C
+1.1.1b -  Andar para frente ( seta para esquerda/direita (depende do lado em que vc está) )
+1.1.1c - Andar para atrás  ( seta para esquerda/direita (depende do lado em que vc está) )
+1.1.1d - 2 tipos de defesa para baixo, se agachando ( seta para baixo ) 
+1.1.1e - Defesa para cima, saltando ( seta para cima ) 
+1.1.1f - 3 tipos de rasteira ( tecla R)
+1.1.1g - 2 tipos de soco: Um de cima para baixo ( tecla S + seta para cima ) e outro agachado ( tecla S + tecla para baixo)
+
+1.2) Como criar um novo personagem
+
+- Adquira SpriteSheets legais
+- Extenda a classe Street_Fighter.Fighter implementando o método update
+- No construtor, adicione os golpes que seu lutador executará à coleção *actions*. (Veja a classe Street_Fighter.Ryu para um exemplo)
+
+1.3) Como criar golpes
+
+- crie um namespace como o nome do seu personagem dentro do namespace Street_Fighter.action (como eu fiz para o Ryu)
+- dentro de seu namespace, crie classes que extendam a classe Street_Fighter.action.Action (veja as ações no namespace Street_Fighter.action.Ryu para um exemplo)
+- adicione seu novo golpe na coleção *actions* do seu personagem (ver ítem 1.2)
+
+1.4) Recomendações
+
+- Preze por um código limpo, com boa nomeclatura para variáveis locais, propriedades, classes ...
+- Refratore o que estiver parecendo gambiarra ( seja seu código ou ñ)
+- Procure SpriteSheets de boa qualidade
+- Não se preucupe com performance muito cedo. Implemente seu código, posteriormente caso seja necessário alguma modificação para atingir uma boa performance o faça.
+- Qualquer dúvida, sugestão, crítica entre em contato
+- Obrigado :-)
+
+1.5) Contato:
+- lsimaocosta@gmail.com
+- http://lucassimao.wordpress.com
