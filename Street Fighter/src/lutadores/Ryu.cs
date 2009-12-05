@@ -35,6 +35,7 @@ namespace Street_Fighter.lutadores
             actions.Add(new SocoDeBaixoParaCima());
             actions.Add(new Rasteira1());
             actions.Add(new Rasteira2());
+            actions.Add(new Rasteira3());
             this.currentAction = actions[0];
 
 
@@ -55,7 +56,7 @@ namespace Street_Fighter.lutadores
                 else if (state.IsKeyDown(Keys.Left))
                     this.currentAction = actions[6];
                 else if (state.IsKeyDown(Keys.R))
-                    this.currentAction = actions[this.random.Next(12, 14)];
+                    this.currentAction = actions[this.random.Next(12, 15)];
                 else if (state.IsKeyDown(Keys.Down))
                 {
                     if (state.IsKeyDown(Keys.S))

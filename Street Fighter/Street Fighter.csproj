@@ -99,6 +99,7 @@
     <Compile Include="src\action\Ryu\Chute2.cs" />
     <Compile Include="src\action\Ryu\Chute3.cs" />
     <Compile Include="src\action\Ryu\Chute4.cs" />
+    <Compile Include="src\action\Ryu\Rasteira3.cs" />
     <Compile Include="src\action\Ryu\DefesaParaBaixo.cs" />
     <Compile Include="src\action\Ryu\DefesaParaBaixo2.cs" />
     <Compile Include="src\action\Ryu\DefesaPorCima.cs" />
