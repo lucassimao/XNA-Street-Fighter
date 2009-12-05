@@ -28,6 +28,7 @@ namespace Street_Fighter.lutadores
             actions.Add(new Chute4());
             actions.Add(new Recuar(this));
             actions.Add(new Avancar(this));
+            actions.Add(new DefesaParaBaixo());
             this.currentAction = actions[0];
 
 
@@ -47,6 +48,8 @@ namespace Street_Fighter.lutadores
                     this.currentAction = actions[5];
                 else if (state.IsKeyDown(Keys.Left))
                     this.currentAction = actions[6];
+                else if (state.IsKeyDown(Keys.Down))
+                    this.currentAction = actions[7];
 
             }
 

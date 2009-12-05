@@ -84,11 +84,6 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Ryu\ryu_defesa_para_baixo.png">
-      <Name>ryu_defesa_para_baixo</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Ryu\ryu_defesa_para_baixo2.png">
       <Name>ryu_defesa_para_baixo2</Name>
       <Importer>TextureImporter</Importer>
@@ -186,6 +181,13 @@
     </Compile>
     <Compile Include="Ryu\ryu_win.png">
       <Name>ryu_win</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ryu\ryu_defesa_para_baixo.png">
+      <Name>ryu_defesa_para_baixo</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
