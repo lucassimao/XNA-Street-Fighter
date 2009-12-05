@@ -31,6 +31,7 @@ namespace Street_Fighter.lutadores
             actions.Add(new DefesaParaBaixo());
             actions.Add(new DefesaParaBaixo2());
             actions.Add(new DefesaPorCima(this));
+            actions.Add(new SocoPorBaixo());
             this.currentAction = actions[0];
 
 
@@ -39,7 +40,7 @@ namespace Street_Fighter.lutadores
         public override void update(GameTime gameTime)
         {
             this.currentAction.update(gameTime);
-            
+
             if (!this.currentAction.isRunning || this.currentAction == this.posicaoDeRepouso)
             {
                 KeyboardState state = Keyboard.GetState();
@@ -51,7 +52,12 @@ namespace Street_Fighter.lutadores
                 else if (state.IsKeyDown(Keys.Left))
                     this.currentAction = actions[6];
                 else if (state.IsKeyDown(Keys.Down))
-                    this.currentAction = actions[this.random.Next(7,9)];
+                {
+                    if (state.IsKeyDown(Keys.S))
+                        this.currentAction = actions[10];
+                    else
+                        this.currentAction = actions[this.random.Next(7, 9)];
+                }
                 else if (state.IsKeyDown(Keys.Up))
                     this.currentAction = actions[9];
 

@@ -104,6 +104,7 @@
     <Compile Include="src\action\Ryu\DefesaPorCima.cs" />
     <Compile Include="src\action\Ryu\Gingando.cs" />
     <Compile Include="src\action\Ryu\Recuar.cs" />
+    <Compile Include="src\action\Ryu\SocoPorBaixo.cs" />
     <Compile Include="src\ContentManagerFacade.cs" />
     <Compile Include="src\interfaces\IMoveable.cs" />
     <Compile Include="src\GameEntryPoint.cs" />
