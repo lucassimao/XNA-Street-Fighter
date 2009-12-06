@@ -10,6 +10,9 @@ using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 using Street_Fighter.action;
 using Street_Fighter.interfaces;
+using FarseerGames.FarseerPhysics.Factories;
+using FarseerGames.FarseerPhysics.Collisions;
+using FarseerGames.FarseerPhysics.Dynamics;
 
 namespace Street_Fighter
 {
@@ -20,6 +23,8 @@ namespace Street_Fighter
         protected Action posicaoDeRepouso; // é a posição onde ele fica "gingando"
         protected Vector2 posicao;
         protected uint life;
+        protected Body body;
+        protected Geom geometry;
 
         public Action PosicaoDeRepouso
         {
@@ -53,6 +58,8 @@ namespace Street_Fighter
             this.posicao = posicao;
             this.posicao = posicao;
             this.currentAction = null;
+            this.body = BodyFactory.Instance.CreateRectangleBody(50, 50, 10);
+            this.geometry = GeomFactory.Instance.CreateRectangleGeom(this.body, 50, 50);
         }
 
         public abstract void update(GameTime gameTime);

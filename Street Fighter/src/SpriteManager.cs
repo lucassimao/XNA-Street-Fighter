@@ -12,6 +12,7 @@ using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 using Street_Fighter.interfaces;
 using XNAGifAnimationLibrary;
+using FarseerGames.FarseerPhysics;
 
 namespace Street_Fighter
 {
@@ -21,12 +22,14 @@ namespace Street_Fighter
         SpriteBatch spriteBatch;
         Fighter lutador1;
         Fighter lutador2;
+        PhysicsSimulator simulador;        
 
         public SpriteManager(Game game, Fighter lutador1, Fighter lutador2)
             : base(game)
         {
             this.lutador1 = lutador1;
             this.lutador2 = lutador2;
+            simulador = new PhysicsSimulator(new Vector2(0, 9.8f));
         }
 
         public override void Initialize()
@@ -48,24 +51,31 @@ namespace Street_Fighter
 
         }
 
-        public override void Draw(GameTime gameTime)
+        private Vector2 getPosicaoCorrigida(ref Fighter lutador)
         {
-            base.Draw(gameTime);
-            spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
+            Vector2 posicao = lutador.CurrentPosition;
 
-            Vector2 posicao = lutador1.CurrentPosition;
+            float rightLowerXCorner = posicao.X + lutador1.PosicaoDeRepouso.CurrentStep.Width * 2;
+            float rightLowerYCorner = posicao.Y + lutador1.PosicaoDeRepouso.CurrentStep.Height * 2;
 
-            float rightLowerXCorner = posicao.X + lutador1.PosicaoDeRepouso.CurrentStep.Width*2;
-            float rightLowerYCorner = posicao.Y + lutador1.PosicaoDeRepouso.CurrentStep.Height*2;
-
-            float wrongNewRightLowerXCorner = posicao.X + lutador1.CurrentAction.CurrentStep.Width*2;
-            float wrongNewRightLowerYCorner = posicao.Y + lutador1.CurrentAction.CurrentStep.Height*2;
-
+            float wrongNewRightLowerXCorner = posicao.X + lutador1.CurrentAction.CurrentStep.Width * 2;
+            float wrongNewRightLowerYCorner = posicao.Y + lutador1.CurrentAction.CurrentStep.Height * 2;
 
             Vector2 posicaoCorrigida = new Vector2();
 
             posicaoCorrigida.X = posicao.X - (wrongNewRightLowerXCorner - rightLowerXCorner);
             posicaoCorrigida.Y = posicao.Y - (wrongNewRightLowerYCorner - rightLowerYCorner);
+
+            return posicaoCorrigida;
+
+        }
+
+        public override void Draw(GameTime gameTime)
+        {
+            base.Draw(gameTime);
+            spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
+
+            Vector2 posicaoCorrigida = getPosicaoCorrigida(ref lutador1);
 
             spriteBatch.Draw(lutador1.CurrentAction.Texture, posicaoCorrigida, lutador1.CurrentAction.CurrentStep,
                 Color.White, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
