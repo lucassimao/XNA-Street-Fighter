@@ -10,7 +10,7 @@ namespace Street_Fighter.action.Ryu
         public Rasteira3()
             : base(null, "Rasteira3")
         {
-            this.updateInterval = 220;
+            this.updateInterval = 120;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_golpesRasteiros");
             this.steps.Add(new Rectangle(1536, 614, 131, 87));
             this.steps.Add(new Rectangle(1834,616, 85, 81));

@@ -19,9 +19,9 @@ namespace Street_Fighter.lutadores
             : base(posicao)
         {
             this.random = new Random();
-            this.posicaoDeRepouso = new Gingando(this);
+            this.PosicaoDeRepouso = new Gingando(this);
 
-            actions.Add(this.posicaoDeRepouso);
+            actions.Add(this.PosicaoDeRepouso);
             actions.Add(new Chute1());
             actions.Add(new Chute2());
             actions.Add(new Chute3());
@@ -36,16 +36,19 @@ namespace Street_Fighter.lutadores
             actions.Add(new Rasteira1());
             actions.Add(new Rasteira2());
             actions.Add(new Rasteira3());
-            this.currentAction = actions[0];
+            this.CurrentAction = actions[0];
 
 
         }
 
         public override void update(GameTime gameTime)
         {
-            this.currentAction.update(gameTime);
+            this.CurrentAction.update(gameTime);
+           
+            if (Keyboard.GetState().IsKeyDown(Keys.A))
+                this.Body.ApplyImpulse(new Vector2(-250, -250));
 
-            if (!this.currentAction.isRunning || this.currentAction == this.posicaoDeRepouso)
+            if (!this.CurrentAction.isRunning || this.CurrentAction == this.PosicaoDeRepouso)
             {
                 KeyboardState state = Keyboard.GetState();
                 int qtdeTeclas = state.GetPressedKeys().Length;
@@ -55,34 +58,37 @@ namespace Street_Fighter.lutadores
 
                     case 1:
                         if (state.IsKeyDown(Keys.C))
-                            this.currentAction = actions[this.random.Next(1, 5)];
+                            this.CurrentAction = actions[this.random.Next(1, 5)];
                         else if (state.IsKeyDown(Keys.Right))
-                            this.currentAction = actions[5];
+                            this.CurrentAction = actions[5];
                         else if (state.IsKeyDown(Keys.Left))
-                            this.currentAction = actions[6];
+                            this.CurrentAction = actions[6];
                         else if (state.IsKeyDown(Keys.R))
-                            this.currentAction = actions[this.random.Next(12, 15)];
+                            this.CurrentAction = actions[this.random.Next(12, 15)];
                         else if (state.IsKeyDown(Keys.Down))
-                            this.currentAction = actions[this.random.Next(7, 9)];
+                            this.CurrentAction = actions[this.random.Next(7, 9)];
                         else if (state.IsKeyDown(Keys.Up))
-                            this.currentAction = actions[9];
+                            this.CurrentAction = actions[9];
+
+                        Console.WriteLine(this.CurrentAction);
+                        
 
                         break;
                     case 2:
                         if (state.IsKeyDown(Keys.Down) && state.IsKeyDown(Keys.S))
-                            this.currentAction = actions[10];
+                            this.CurrentAction = actions[10];
                         else if (state.IsKeyDown(Keys.Up) && state.IsKeyDown(Keys.S))
-                            this.currentAction = actions[11];
+                            this.CurrentAction = actions[11];
                         break;
 
                 }
 
 
                 // se todas as "fases" da atual ação já foram renderizadas, voltemos à posição de repouso (gingando)
-                if (!this.currentAction.isRunning)
+                if (!this.CurrentAction.isRunning)
                 {
-                    this.currentAction.reset();
-                    this.currentAction = this.posicaoDeRepouso;
+                   this.CurrentAction.reset();
+                    this.CurrentAction = this.PosicaoDeRepouso;
                 }
             }
         }

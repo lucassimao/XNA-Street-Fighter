@@ -252,6 +252,15 @@
       <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\Ryu\ryu_defesa_para_baixo.xnb</Output>
       <Time>2009-12-05T00:21:01.7856668-03:00</Time>
     </Item>
+    <Item>
+      <Source>barra.png</Source>
+      <Name>barra</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user\Projetos XNA\Street Fighter\Street Fighter\bin\x86\Release\Content\barra.xnb</Output>
+      <Time>2009-12-06T16:31:01.5936-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

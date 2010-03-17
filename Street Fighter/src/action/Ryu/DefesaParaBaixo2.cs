@@ -10,7 +10,7 @@ namespace Street_Fighter.action.Ryu
         public DefesaParaBaixo2()
             : base(null, "DefesaParaBaixo2")
         {
-            this.updateInterval = 350;
+            this.updateInterval = 200;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_defesa_por_baixo");
             this.steps.Add(new Rectangle(93, 82, 95, 82));
             this.steps.Add(new Rectangle(383, 84, 96, 75));

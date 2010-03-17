@@ -16,7 +16,7 @@ namespace Street_Fighter.action
         protected Texture2D spriteSheet;
         protected List<Rectangle> steps = new List<Rectangle>();
         protected ushort currentStep = 0;
-        protected uint updateInterval = 350;
+        protected uint updateInterval = 150;
         protected int timeSinceLastFrame = 0;
 
         public Texture2D Texture

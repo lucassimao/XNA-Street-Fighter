@@ -10,7 +10,7 @@ namespace Street_Fighter.action.Ryu
         public SocoPorBaixo()
             : base(null, "SocoPorBaixo")
         {
-            this.updateInterval = 350;
+            this.updateInterval = 200;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_golpesRasteiros");
             this.steps.Add(new Rectangle(96, 91, 93, 72));
             this.steps.Add(new Rectangle(353, 86, 123, 81));

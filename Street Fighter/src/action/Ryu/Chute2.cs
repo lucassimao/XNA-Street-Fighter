@@ -11,7 +11,7 @@ namespace Street_Fighter.action.Ryu
         public Chute2()
             : base(null, "Chute2")
         {
-            this.updateInterval = 150;
+            this.updateInterval = 75;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_pezadas1");
             this.steps.Add(new Rectangle(683, 237, 83, 103));
             this.steps.Add(new Rectangle(971, 238, 88, 102));

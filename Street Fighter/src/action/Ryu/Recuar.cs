@@ -11,12 +11,10 @@ namespace Street_Fighter.action.Ryu
         public Recuar(IMoveable objMovimentavel)
             : base(objMovimentavel, "Recuar")
         {
-            this.updateInterval = 350;
+            this.updateInterval = 200;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_andando_para_atras");
-           this.steps.Add(new Rectangle(378, 53, 85, 109));
+            this.steps.Add(new Rectangle(378, 53, 85, 109));
             this.steps.Add(new Rectangle(969, 48, 73, 113));
-            this.steps.Add(new Rectangle(1550, 46, 78, 116));
-
         }
 
         protected override void atualizarObjeto()

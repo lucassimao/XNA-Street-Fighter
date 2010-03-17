@@ -10,7 +10,7 @@ namespace Street_Fighter.action.Ryu
         public DefesaPorCima(IMoveable objMovimentavel)
             : base(objMovimentavel, "DefesaPorCima")
         {
-            this.updateInterval = 300;
+            this.updateInterval = 120;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_escapando_por_cima");
             this.steps.Add(new Rectangle(104, 34, 82, 130));
             this.steps.Add(new Rectangle(393, 33, 81,133));

@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
 using Street_Fighter.action;
 using Street_Fighter.interfaces;
+using FarseerGames.FarseerPhysics;
 using FarseerGames.FarseerPhysics.Factories;
 using FarseerGames.FarseerPhysics.Collisions;
 using FarseerGames.FarseerPhysics.Dynamics;
@@ -19,49 +20,32 @@ namespace Street_Fighter
     public abstract class Fighter : IMoveable
     {
         protected List<Action> actions;
-        protected Action currentAction;
-        protected Action posicaoDeRepouso; // é a posição onde ele fica "gingando"
-        protected Vector2 posicao;
         protected uint life;
-        protected Body body;
-        protected Geom geometry;
 
-        public Action PosicaoDeRepouso
-        {
-            get { return this.posicaoDeRepouso; }
-        }
-        public Action CurrentAction
-        {
-            get
-            {
-                return currentAction;
-            }
-        }
+        // é a posição onde ele fica "gingando"
+        public Action PosicaoDeRepouso { get; protected set; }
+        public Action CurrentAction { get; protected set; }
 
-        public Vector2 CurrentPosition
-        {
-            get { return posicao; }
-        }
+        public Body Body {  get;private set; }
 
+        public Geom Geometry { get; private set; }
 
+        public Vector2 CurrentPosition {   get { return Body.Position; }  }
 
-        void IMoveable.incrementCurrentPosition(float xInc, float yInc)
-        {
-            posicao.X += xInc;
-            posicao.Y += yInc;
-        }
 
         protected Fighter(Vector2 posicao)
         {
             this.actions = new List<Action>();
             this.life = 1000;
-            this.posicao = posicao;
-            this.posicao = posicao;
-            this.currentAction = null;
-            this.body = BodyFactory.Instance.CreateRectangleBody(50, 50, 10);
-            this.geometry = GeomFactory.Instance.CreateRectangleGeom(this.body, 50, 50);
+            Body = BodyFactory.Instance.CreateRectangleBody(88, 10, 90);
+            Body.Position = posicao;
+            Geometry = GeomFactory.Instance.CreateRectangleGeom(Body, 88, 10);
+                     
         }
-
+        void IMoveable.incrementCurrentPosition(float xInc, float yInc)
+        {
+            Body.Position = new Vector2(Body.Position.X + xInc, Body.Position.Y + yInc);
+        }
         public abstract void update(GameTime gameTime);
     }
 }

@@ -13,6 +13,9 @@ using Microsoft.Xna.Framework.Storage;
 using Street_Fighter.interfaces;
 using XNAGifAnimationLibrary;
 using FarseerGames.FarseerPhysics;
+using FarseerGames.FarseerPhysics.Factories;
+using FarseerGames.FarseerPhysics.Collisions;
+using FarseerGames.FarseerPhysics.Dynamics;
 
 namespace Street_Fighter
 {
@@ -22,14 +25,35 @@ namespace Street_Fighter
         SpriteBatch spriteBatch;
         Fighter lutador1;
         Fighter lutador2;
-        PhysicsSimulator simulador;        
+        PhysicsSimulator simulador;
+        Body groundBody;
+        Geom groundGeom;
+        Texture2D barra;
+       
 
         public SpriteManager(Game game, Fighter lutador1, Fighter lutador2)
             : base(game)
         {
             this.lutador1 = lutador1;
             this.lutador2 = lutador2;
-            simulador = new PhysicsSimulator(new Vector2(0, 9.8f));
+            simulador = new PhysicsSimulator(new Vector2(0, 10));
+            //simulador.Add(lutador1.Body);
+            //simulador.Add(lutador1.Geometry);
+
+
+           
+            groundBody = BodyFactory.Instance.CreateRectangleBody( 800, 10, 1);
+            groundGeom = GeomFactory.Instance.CreateRectangleGeom(groundBody, 800, 10);
+            groundBody.Position = new Vector2(0, 550);
+            groundBody.IsStatic = true;
+            groundGeom.RestitutionCoefficient = .2f;
+            groundGeom.FrictionCoefficient = .2f;
+            
+            barra = ContentManagerFacade.Load<Texture2D>("barra");
+            simulador.Add(groundBody);
+            simulador.Add(groundGeom);
+        
+           
         }
 
         public override void Initialize()
@@ -46,6 +70,7 @@ namespace Street_Fighter
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            //simulador.Update(gameTime.ElapsedGameTime.Milliseconds * .001f);
             lutador1.update(gameTime);
 
 
@@ -55,11 +80,11 @@ namespace Street_Fighter
         {
             Vector2 posicao = lutador.CurrentPosition;
 
-            float rightLowerXCorner = posicao.X + lutador1.PosicaoDeRepouso.CurrentStep.Width * 2;
-            float rightLowerYCorner = posicao.Y + lutador1.PosicaoDeRepouso.CurrentStep.Height * 2;
+            float rightLowerXCorner = posicao.X + lutador.PosicaoDeRepouso.CurrentStep.Width * 2;
+            float rightLowerYCorner = posicao.Y + lutador.PosicaoDeRepouso.CurrentStep.Height * 2;
 
-            float wrongNewRightLowerXCorner = posicao.X + lutador1.CurrentAction.CurrentStep.Width * 2;
-            float wrongNewRightLowerYCorner = posicao.Y + lutador1.CurrentAction.CurrentStep.Height * 2;
+            float wrongNewRightLowerXCorner = posicao.X + lutador.CurrentAction.CurrentStep.Width * 2;
+            float wrongNewRightLowerYCorner = posicao.Y + lutador.CurrentAction.CurrentStep.Height * 2;
 
             Vector2 posicaoCorrigida = new Vector2();
 
@@ -73,12 +98,16 @@ namespace Street_Fighter
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
+
             spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.BackToFront, SaveStateMode.None);
 
             Vector2 posicaoCorrigida = getPosicaoCorrigida(ref lutador1);
 
             spriteBatch.Draw(lutador1.CurrentAction.Texture, posicaoCorrigida, lutador1.CurrentAction.CurrentStep,
                 Color.White, 0, Vector2.Zero, 2, SpriteEffects.None, 0);
+
+            spriteBatch.Draw(barra, groundBody.Position, null, Color.White, 
+                groundBody.Rotation, Vector2.Zero, 1, SpriteEffects.None, 0);
 
             spriteBatch.End();
 

@@ -11,7 +11,7 @@ namespace Street_Fighter.action.Ryu
         public Avancar(IMoveable objMovimentavel)
             : base(objMovimentavel, "Avancar")
         {
-            this.updateInterval = 550;
+            this.updateInterval = 250;
             this.spriteSheet = ContentManagerFacade.Load<Texture2D>(@"Ryu\ryu_andando_para_frente");
             this.steps.Add(new Rectangle(1261, 49, 96, 109));
             this.steps.Add(new Rectangle(1549, 49, 90, 113));
